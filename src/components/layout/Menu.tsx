@@ -17,6 +17,7 @@ import moc from '../moc';
 import riskAssessments from '../riskAssessments';
 import waste from '../waste';
 import SubMenu from './SubMenu';
+import Moc from '../moc';
 
 type MenuName = 'menuEmployees' | 'menuChemicals' | 'menuMOC' | 'menuRiskAssessments' | 'menuWaste';
 
@@ -52,7 +53,7 @@ const Menu = ({ dense = false }: MenuProps) => {
             <SubMenu
                 handleToggle={() => handleToggle('menuEmployees')}
                 isOpen={state.menuEmployees}
-                name="pos.menu.sales"
+                name="Employees"
                 icon={<employees.icon />}
                 dense={dense}
             >
@@ -66,76 +67,16 @@ const Menu = ({ dense = false }: MenuProps) => {
                     dense={dense}
                 />
                 <MenuItemLink
-                    to="/invoices"
+                    to="/orgchart"
                     state={{ _scrollToTop: true }}
                     primaryText={translate(`resources.invoices.name`, {
                         smart_count: 2,
                     })}
-                    leftIcon={<MOC.icon />}
+                    leftIcon={<moc.icon />}
                     dense={dense}
                 />
             </SubMenu>
-            <SubMenu
-                handleToggle={() => handleToggle('menuCatalog')}
-                isOpen={state.menuCatalog}
-                name="pos.menu.catalog"
-                icon={<products.icon />}
-                dense={dense}
-            >
-                <MenuItemLink
-                    to="/products"
-                    state={{ _scrollToTop: true }}
-                    primaryText={translate(`resources.products.name`, {
-                        smart_count: 2,
-                    })}
-                    leftIcon={<products.icon />}
-                    dense={dense}
-                />
-                <MenuItemLink
-                    to="/categories"
-                    state={{ _scrollToTop: true }}
-                    primaryText={translate(`resources.categories.name`, {
-                        smart_count: 2,
-                    })}
-                    leftIcon={<categories.icon />}
-                    dense={dense}
-                />
-            </SubMenu>
-            <SubMenu
-                handleToggle={() => handleToggle('menuCustomers')}
-                isOpen={state.menuCustomers}
-                name="pos.menu.customers"
-                icon={<visitors.icon />}
-                dense={dense}
-            >
-                <MenuItemLink
-                    to="/customers"
-                    state={{ _scrollToTop: true }}
-                    primaryText={translate(`resources.customers.name`, {
-                        smart_count: 2,
-                    })}
-                    leftIcon={<visitors.icon />}
-                    dense={dense}
-                />
-                <MenuItemLink
-                    to="/segments"
-                    state={{ _scrollToTop: true }}
-                    primaryText={translate(`resources.segments.name`, {
-                        smart_count: 2,
-                    })}
-                    leftIcon={<LabelIcon />}
-                    dense={dense}
-                />
-            </SubMenu>
-            <MenuItemLink
-                to="/reviews"
-                state={{ _scrollToTop: true }}
-                primaryText={translate(`resources.reviews.name`, {
-                    smart_count: 2,
-                })}
-                leftIcon={<reviews.icon />}
-                dense={dense}
-            />
+            
         </Box>
     );
 };
