@@ -30,7 +30,7 @@ const i18nProvider = polyglotI18nProvider(locale => {
 const App = () => {
     return (
         <Admin
-            title=""
+            title="GYDIAR"
             dataProvider={lb4Provider('http:localhost:4000')}
             authProvider={authProvider}
             i18nProvider={i18nProvider}
@@ -41,15 +41,31 @@ const App = () => {
             theme={lightTheme}
         >
             <CustomRoutes>
-                <Route path="/configuration" element={<Configuration />} />               
+                <Route 
+                    path="/configuration" 
+                    element={<Configuration />} 
+                />               
             </CustomRoutes>
-            <Resource name="employees" {...employees} />
-            <Resource name="chemicals" {...chemicals} 
+            <Resource 
+                name="employees" 
+                {...employees} 
             />
-            <Resource name="MOC" {...moc} />
-            <Resource name="riskAssssments" {...riskAssessments} />
-            <Resource name="waste" {...waste} />
-            
+            <Resource 
+                name="chemicals" 
+                {...chemicals} 
+            />
+            <Resource 
+                name="MOC" 
+                {...moc} 
+            />
+            <Resource 
+                name="riskAssssments" 
+                {...riskAssessments} 
+            />
+            <Resource 
+                name="waste" 
+                {...waste} 
+            />
         </Admin>
     );
 };
