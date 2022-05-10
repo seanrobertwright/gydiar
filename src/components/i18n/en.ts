@@ -45,8 +45,26 @@ const customEnglishMessages: TranslationMessages = {
         employees: {
             name: 'Employee |||| Employees'
         },
+        chemicalRequests: {
+            name: 'Chemical Requests'
+        },
+        sampleNotifications: {
+            name: 'Sample Notifications'
+        },
         orgchart: {
             name: 'Org Chart'
+        },
+        wra: {
+            name: 'WRA'
+        },
+        jha: {
+            name: 'JHA'
+        },
+        nera : {
+            name: 'NERA'
+        },
+        ppe: {
+            name: 'PPE'
         },
     },
 };

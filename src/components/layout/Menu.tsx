@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
+import ChemicalSampleIcon from '@mui/icons-material/Biotech';
+import RiskaAssessmentIcon from '@mui/icons-material/FlashOn';
 
 import {
     useTranslate,
@@ -97,7 +99,7 @@ const Menu = ({ dense = false }: MenuProps) => {
                     primaryText={translate(`resources.sampleNotifications.name`, {
                         smart_count: 2,
                     })}
-                    leftIcon={<chemicals.icon />}
+                    leftIcon={<ChemicalSampleIcon />}
                     dense={dense}
                 />
              </SubMenu>
@@ -108,12 +110,48 @@ const Menu = ({ dense = false }: MenuProps) => {
                 icon={<riskAssessments.icon />}
                 dense={dense}
             >
+                <MenuItemLink
+                    to="/WRA"
+                    state={{ _scrollToTop: true }}
+                    primaryText={translate(`resources.wra.name`, {
+                        smart_count: 2,
+                    })}
+                    leftIcon={<ChemicalSampleIcon />}
+                    dense={dense}
+                />
+                <MenuItemLink
+                    to="/JHA"
+                    state={{ _scrollToTop: true }}
+                    primaryText={translate(`resources.jha.name`, {
+                        smart_count: 2,
+                    })}
+                    leftIcon={<ChemicalSampleIcon />}
+                    dense={dense}
+                />
+                <MenuItemLink
+                    to="/NERA"
+                    state={{ _scrollToTop: true }}
+                    primaryText={translate(`resources.nera.name`, {
+                        smart_count: 2,
+                    })}
+                    leftIcon={<ChemicalSampleIcon />}
+                    dense={dense}
+                />
+                <MenuItemLink
+                    to="/PPE"
+                    state={{ _scrollToTop: true }}
+                    primaryText={translate(`resources.ppe.name`, {
+                        smart_count: 2,
+                    })}
+                    leftIcon={<ChemicalSampleIcon />}
+                    dense={dense}
+                />
             </SubMenu>
             <SubMenu
                 handleToggle={() => handleToggle('menuMOC')}
                 isOpen={state.menuRiskAssessments}
                 name="MOC"
-                icon={<riskAssessments.icon />}
+                icon={<moc.icon />}
                 dense={dense}>
 
             </SubMenu>

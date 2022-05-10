@@ -33,6 +33,7 @@ const App = () => {
             title=""
             dataProvider={lb4Provider('http:localhost:4000')}
             authProvider={authProvider}
+            i18nProvider={i18nProvider}
             dashboard={Dashboard}
             loginPage={Login}
             layout={Layout}

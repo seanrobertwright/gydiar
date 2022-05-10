@@ -1,5 +1,4 @@
-import EmployeesIcon from '@mui/icons-material/AttachMoney';
-
+import EmployeesIcon from '@mui/icons-material/People';
 import EmployeesList from './EmployeesList';
 import EmployeesEdit from './EmployeesEdit';
 import EmpployeesCreate from './EmployeesCreate';

@@ -1,5 +1,4 @@
-import RiskAssessmentIcon from '@mui/icons-material/AttachMoney';
-
+import RiskAssessmentIcon from '@mui/icons-material/FlashOn';
 import RiskAssessmentList from './RiskAssessmentList';
 import RiskAssessmentEdit from './RiskAssessmentEdit';
 
