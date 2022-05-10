@@ -1,4 +1,4 @@
-import WasteIcon from '@mui/icons-material/AttachMoney';
+import WasteIcon from '@mui/icons-material/Delete';
 
 import WasteList from './WasteList';
 import WasteEdit from './WasteEdit';

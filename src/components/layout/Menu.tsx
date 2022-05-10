@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
-import LabelIcon from '@mui/icons-material/Label';
 
 import {
     useTranslate,
@@ -17,7 +16,7 @@ import moc from '../moc';
 import riskAssessments from '../riskAssessments';
 import waste from '../waste';
 import SubMenu from './SubMenu';
-import Moc from '../moc';
+
 
 type MenuName = 'menuEmployees' | 'menuChemicals' | 'menuMOC' | 'menuRiskAssessments' | 'menuWaste';
 
@@ -60,23 +59,72 @@ const Menu = ({ dense = false }: MenuProps) => {
                 <MenuItemLink
                     to="/employees"
                     state={{ _scrollToTop: true }}
-                    primaryText={translate(`resources.commands.name`, {
+                    primaryText={translate(`resources.employees.name`, {
                         smart_count: 2,
                     })}
-                    leftIcon={<chemicals.icon />}
+                    leftIcon={<employees.icon />}
                     dense={dense}
                 />
                 <MenuItemLink
                     to="/orgchart"
                     state={{ _scrollToTop: true }}
-                    primaryText={translate(`resources.invoices.name`, {
+                    primaryText={translate(`resources.orgchart.name`, {
                         smart_count: 2,
                     })}
                     leftIcon={<moc.icon />}
                     dense={dense}
                 />
             </SubMenu>
-            
+            <SubMenu
+                handleToggle={() => handleToggle('menuChemicals')}
+                isOpen={state.menuChemicals}
+                name="Chemicals"
+                icon={<chemicals.icon />}
+                dense={dense}
+            >
+                <MenuItemLink
+                    to="/chemicalRequests"
+                    state={{ _scrollToTop: true }}
+                    primaryText={translate(`resources.chemicalRequests.name`, {
+                        smart_count: 2,
+                    })}
+                    leftIcon={<chemicals.icon />}
+                    dense={dense}
+                />
+                <MenuItemLink
+                    to="/sampleNotifications"
+                    state={{ _scrollToTop: true }}
+                    primaryText={translate(`resources.sampleNotifications.name`, {
+                        smart_count: 2,
+                    })}
+                    leftIcon={<chemicals.icon />}
+                    dense={dense}
+                />
+             </SubMenu>
+            <SubMenu
+                handleToggle={() => handleToggle('menuRiskAssessments')}
+                isOpen={state.menuRiskAssessments}
+                name="Risk Assessments"
+                icon={<riskAssessments.icon />}
+                dense={dense}
+            >
+            </SubMenu>
+            <SubMenu
+                handleToggle={() => handleToggle('menuMOC')}
+                isOpen={state.menuRiskAssessments}
+                name="MOC"
+                icon={<riskAssessments.icon />}
+                dense={dense}>
+
+            </SubMenu>
+            <SubMenu
+                handleToggle={() => handleToggle('menuWaste')}
+                isOpen={state.menuWaste}
+                name="Waste"
+                icon={<waste.icon />}
+                dense={dense}>
+
+            </SubMenu>
         </Box>
     );
 };

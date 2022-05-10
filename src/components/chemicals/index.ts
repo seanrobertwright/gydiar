@@ -1,5 +1,4 @@
-import ChemicalIcon from '@mui/icons-material/AttachMoney';
-
+import ChemicalIcon from '@mui/icons-material/Science';
 import ChemicalList from './ChemicalList';
 import ChemicalEdit from './ChemicalEdit';
 

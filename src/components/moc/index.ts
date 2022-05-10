@@ -1,4 +1,4 @@
-import MOCIcon from '@mui/icons-material/AddToQueueRounded';
+import MOCIcon from '@mui/icons-material/ChangeCircle';
 import MOCList from './MOCList';
 import MOCEdit from './MOCEdit';
 import MOCCreate from './MOCCreate';
