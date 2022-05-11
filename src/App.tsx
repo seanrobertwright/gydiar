@@ -14,6 +14,7 @@ import { lightTheme } from './components/layout/themes';
 import chemicals from './components/chemicals';
 import Configuration from './components/configuration/Configuration';
 import employees from './components/employees';
+import orgChart from './components/employees/orgChart';
 import riskAssessments from './components/riskAssessments';
 import waste from './components/waste';
 import moc from './components/moc';
@@ -49,6 +50,10 @@ const App = () => {
             <Resource 
                 name="employees" 
                 {...employees} 
+            />
+            <Resource 
+                name="orgChart" 
+                {...orgChart} 
             />
             <Resource 
                 name="chemicals" 
