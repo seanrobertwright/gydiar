@@ -16,7 +16,7 @@ const Logo = (props: SVGProps<SVGSVGElement>) => {
                 style={{
                     lineHeight: 1.25,
                 }}
-                fontWeight={400}
+                fontWeight={500}
                 fontSize={7.056}
                 fontFamily="Permanent Marker"
                 letterSpacing={0}

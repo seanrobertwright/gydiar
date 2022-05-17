@@ -14,6 +14,7 @@ import { lightTheme } from './components/layout/themes';
 import chemicals from './components/chemicals';
 import Configuration from './components/configuration/Configuration';
 import employees from './components/employees';
+import orgChart from './components/employees/orgChart';
 import riskAssessments from './components/riskAssessments';
 import waste from './components/waste';
 import moc from './components/moc';
@@ -30,7 +31,7 @@ const i18nProvider = polyglotI18nProvider(locale => {
 const App = () => {
     return (
         <Admin
-            title=""
+            title="GYDIAR"
             dataProvider={lb4Provider('http:localhost:4000')}
             authProvider={authProvider}
             i18nProvider={i18nProvider}
@@ -41,15 +42,35 @@ const App = () => {
             theme={lightTheme}
         >
             <CustomRoutes>
-                <Route path="/configuration" element={<Configuration />} />               
+                <Route 
+                    path="/configuration" 
+                    element={<Configuration />} 
+                />               
             </CustomRoutes>
-            <Resource name="employees" {...employees} />
-            <Resource name="chemicals" {...chemicals} 
+            <Resource 
+                name="employees" 
+                {...employees} 
             />
-            <Resource name="MOC" {...moc} />
-            <Resource name="riskAssssments" {...riskAssessments} />
-            <Resource name="waste" {...waste} />
-            
+            <Resource 
+                name="orgChart" 
+                {...orgChart} 
+            />
+            <Resource 
+                name="chemicals" 
+                {...chemicals} 
+            />
+            <Resource 
+                name="MOC" 
+                {...moc} 
+            />
+            <Resource 
+                name="riskAssssments" 
+                {...riskAssessments} 
+            />
+            <Resource 
+                name="waste" 
+                {...waste} 
+            />
         </Admin>
     );
 };

@@ -60,7 +60,6 @@ const CustomAppBar = (props: any) => {
                 }}
                 id="react-admin-title"
             />
-            {isLargeEnough && <Logo />}
             {isLargeEnough && <Box component="span" sx={{ flex: 1 }} />}
         </AppBar>
     );

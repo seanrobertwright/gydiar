@@ -54,7 +54,7 @@ const Menu = ({ dense = false }: MenuProps) => {
             <SubMenu
                 handleToggle={() => handleToggle('menuEmployees')}
                 isOpen={state.menuEmployees}
-                name="Employees"
+                name="pos.menu.employees"
                 icon={<employees.icon />}
                 dense={dense}
             >
@@ -80,7 +80,7 @@ const Menu = ({ dense = false }: MenuProps) => {
             <SubMenu
                 handleToggle={() => handleToggle('menuChemicals')}
                 isOpen={state.menuChemicals}
-                name="Chemicals"
+                name="pos.menu.chemicals"
                 icon={<chemicals.icon />}
                 dense={dense}
             >
@@ -106,7 +106,7 @@ const Menu = ({ dense = false }: MenuProps) => {
             <SubMenu
                 handleToggle={() => handleToggle('menuRiskAssessments')}
                 isOpen={state.menuRiskAssessments}
-                name="Risk Assessments"
+                name="pos.menu.riskAssessments"
                 icon={<riskAssessments.icon />}
                 dense={dense}
             >
@@ -147,10 +147,11 @@ const Menu = ({ dense = false }: MenuProps) => {
                     dense={dense}
                 />
             </SubMenu>
+            
             <SubMenu
                 handleToggle={() => handleToggle('menuMOC')}
                 isOpen={state.menuRiskAssessments}
-                name="MOC"
+                name="pos.menu.moc"
                 icon={<moc.icon />}
                 dense={dense}>
 
@@ -158,7 +159,7 @@ const Menu = ({ dense = false }: MenuProps) => {
             <SubMenu
                 handleToggle={() => handleToggle('menuWaste')}
                 isOpen={state.menuWaste}
-                name="Waste"
+                name="pos.menu.waste"
                 icon={<waste.icon />}
                 dense={dense}>
 
