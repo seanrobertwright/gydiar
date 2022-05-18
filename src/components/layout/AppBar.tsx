@@ -45,7 +45,7 @@ const CustomAppBar = (props: any) => {
     return (
         <AppBar
             {...props}
-            color="secondary"
+            color="primary"
             elevation={1}
             userMenu={<CustomUserMenu />}
         >

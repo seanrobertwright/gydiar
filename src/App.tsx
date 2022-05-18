@@ -3,6 +3,8 @@ import { Admin, CustomRoutes, Resource } from 'react-admin';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import { Route } from 'react-router';
 import lb4Provider from 'react-admin-lb4';
+import { defaultTheme } from 'react-admin';
+import red from '@mui/material/colors/red';
 
 import { authProvider } from './components/authProvider';
 import { Login, Layout } from './components/layout';
@@ -28,6 +30,25 @@ const i18nProvider = polyglotI18nProvider(locale => {
     return englishMessages;
 }, 'en');
 
+const gydiarTheme = {
+    ...defaultTheme,
+    palette: {
+        primary: {
+            main: '#E1000F', 
+        },
+        secondary: {
+            main: '#ffffff',
+        },
+        error: red,
+        contrastThreshold: 3,
+        tonalOffset: 0.2,
+    },
+    typography: {
+        // Use the system font instead of the default Roboto font.
+        fontFamily: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Arial', 'sans-serif'].join(','),
+    },
+};
+
 const App = () => {
     return (
         <Admin
@@ -39,7 +60,7 @@ const App = () => {
             loginPage={Login}
             layout={Layout}
             disableTelemetry
-            theme={lightTheme}
+            theme={gydiarTheme}     
         >
             <CustomRoutes>
                 <Route 

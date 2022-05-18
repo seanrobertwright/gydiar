@@ -31,7 +31,7 @@ const SubMenu = (props: Props) => {
             <ListItemIcon sx={{ minWidth: 5 }}>
                 {isOpen ? <ExpandMore /> : icon}
             </ListItemIcon>
-            <Typography variant="inherit" color="textSecondary">
+            <Typography variant="inherit" color="textPrimary">
                 {translate(name)}
             </Typography>
         </MenuItem>
