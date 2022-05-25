@@ -75,3 +75,13 @@ USERNAME: gydiar
 
 
 
+CODE SUGGESTIONS:
+-----------------
+Use ra-auth-acl for routes that require certain permissions
+https://github.com/marmelab/ra-auth-acl
+
+Use the ra-datagrid instead of the MUI one 
+https://github.com/marmelab/ra-datagrid
+
+Double List:
+https://github.com/marmelab/double-list-react-admin
