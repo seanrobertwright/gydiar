@@ -35,12 +35,6 @@ COMPLIANCE
     BIENNIEL
 SCORECARDS
 
-
-
-
-
-
-
 ATTRIBUTIONS
 ------------
 
@@ -76,7 +70,7 @@ USERNAME: gydiar
 
 
 CODE SUGGESTIONS:
------------------
+-------------------------------
 Use ra-auth-acl for routes that require certain permissions
 https://github.com/marmelab/ra-auth-acl
 
