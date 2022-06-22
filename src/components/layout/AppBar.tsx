@@ -17,6 +17,7 @@ import Logo from './Logo';
 const ConfigurationMenu = React.forwardRef((props, ref) => {
     const translate = useTranslate();
     return (
+        <div>
         <MenuItem
             component={Link}
             // @ts-ignore
@@ -29,6 +30,8 @@ const ConfigurationMenu = React.forwardRef((props, ref) => {
             </ListItemIcon>
             <ListItemText>{translate('pos.configuration')}</ListItemText>
         </MenuItem>
+       
+      </div>
     );
 });
 const CustomUserMenu = () => (
@@ -61,6 +64,9 @@ const CustomAppBar = (props: any) => {
                 id="react-admin-title"
             />
             {isLargeEnough && <Box component="span" sx={{ flex: 1 }} />}
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        GYDIAR
+      </Typography>
         </AppBar>
     );
 };
