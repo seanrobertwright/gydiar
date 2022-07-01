@@ -39,7 +39,7 @@ export const darkTheme = {
 export const lightTheme = {
     palette: {
         primary: {
-            main: '#4f3cc9',
+            main: '#E1000F',
         },
         secondary: {
             light: '#5f5fc4',
